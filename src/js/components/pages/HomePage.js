@@ -18,16 +18,19 @@ export default class HomePage extends Component {
     };
 
     async componentDidMount() {
-        const body = await getListOfRestaurants();
-        let filters = [];
-        body.data.map(restaurant => {
-            filters = filters.concat(restaurant.general.categories[0].split(','));
-        });
-        console.log(body);
-        this.setState({
-            data: body.data,
-            filters: new Set(filters)
-        });
+        try {
+            const body = await getListOfRestaurants();
+            let filters = [];
+            body.data.map(restaurant => {
+                filters = filters.concat(restaurant.general.categories[0].split(','));
+            });
+            this.setState({
+                data: body.data,
+                filters: new Set(filters)
+            });
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     onChange = ({ currentTarget: { value, name } }) =>
@@ -57,7 +60,7 @@ export default class HomePage extends Component {
     render() {
         return (
             <div>
-                <div>Logo</div>
+                <div className={style.logo} />
                 <div className={style.contentWrapper}>
                     <div className={style.filtersContainer}>
                         <Select

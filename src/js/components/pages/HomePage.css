@@ -13,3 +13,8 @@
     width: 13%;
     margin-left: 20px;
 }
+
+.logo {
+    height: 140px;
+    background: url('../../../img/logo.jpg') no-repeat left;
+}

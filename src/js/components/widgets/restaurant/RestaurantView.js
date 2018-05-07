@@ -6,8 +6,8 @@ import style from './RestaurantView.css';
 const renderCategories = item => {
     const categories = item.general.categories || item.info.categories;
     return (
-        categories[0].split(',').map(category => (
-            <div className={style.category}>{category}</div>
+        categories[0].split(',').map((category, i) => (
+            <div key={i} className={style.category}>{category}</div>
         ))
     );
 };
@@ -27,7 +27,7 @@ const getRestaurantTitleString = item => (
 );
 
 const RestaurantView = ({ item }) => {
-    const { general, rating, address, info } = item;
+    const { general, address, info } = item;
     if (!general || !address) {
         return null;
     }

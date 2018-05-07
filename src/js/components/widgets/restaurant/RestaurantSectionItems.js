@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './RestaurantSectionItems.css';
 
 const RestaurantSectionItems = ({ items }) => {
@@ -23,6 +24,10 @@ const RestaurantSectionItems = ({ items }) => {
     return (
         <div>{ renderProducts() }</div>
     )
+};
+
+RestaurantSectionItems.propTypes = {
+    items: PropTypes.array
 };
 
 export default RestaurantSectionItems;

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import RestaurantView from '../widgets/restaurant/RestaurantView';
 import RestaurantProductList from '../widgets/restaurant/RestaurantProductList';
 import { getRestaurantInfo } from '../../utils/Api';
 
-export default class Restaurant extends Component {
+export default class RestaurantPage extends Component {
     state = {
         data: null
     };
@@ -27,4 +28,8 @@ export default class Restaurant extends Component {
             </div>
         )
     }
+};
+
+RestaurantPage.propTypes = {
+    match: PropTypes.object
 };

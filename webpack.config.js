@@ -1,11 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const port = 9300;
 
 const config = {
-    entry: ['babel-polyfill', './src/index.js'],
+    entry: ['babel-polyfill', './src/js/index.js'],
     devtool: 'source-map',
     output: {
         path: path.join(__dirname, '/dist'),
@@ -35,6 +34,10 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.jpg$/,
+                loader: 'url-loader'
             }
         ]
     },
@@ -49,10 +52,7 @@ const config = {
             filename: 'index.html',
             template: 'template.html',
             inject: false
-        }),
-        new CopyWebpackPlugin([
-            'config.js'
-        ])
+        })
     ]
 };
 
