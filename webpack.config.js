@@ -5,7 +5,6 @@ const port = 9300;
 
 const config = {
     entry: ['babel-polyfill', './src/js/index.js'],
-    devtool: 'source-map',
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'

@@ -14,7 +14,7 @@ export const makeRequest = (path, method = 'GET') => {
     return fetch(`${config.endpoint}${path}`, options)
         .then(response => {
             if (!response.ok) {
-                console.log(response.status);
+                // error statuses handler
             }
             return response.json();
         })

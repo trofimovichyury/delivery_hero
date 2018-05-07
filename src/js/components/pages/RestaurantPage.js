@@ -12,7 +12,6 @@ export default class RestaurantPage extends Component {
     async componentDidMount() {
         const { id } = this.props.match.params;
         const data = await getRestaurantInfo(id);
-        console.log(data);
         this.setState({ data });
     }
 
