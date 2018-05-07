@@ -1,0 +1,15 @@
+.itemsContainer {
+    width: 50%;
+    margin-left: 30px;
+}
+
+.section {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.restaurantProductList {
+    border: 2px solid #000000;
+    padding: 20px;
+}

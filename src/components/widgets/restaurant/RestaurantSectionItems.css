@@ -1,0 +1,19 @@
+.productContainer {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.productName {
+    flex: 0 0 80%;
+}
+
+.productPrice {
+    flex: 0 0 10%;
+}
+
+.productButton {
+    flex: 0 0 10%;
+    cursor: pointer;
+    color: #0000ff;
+    text-decoration: underline;
+}

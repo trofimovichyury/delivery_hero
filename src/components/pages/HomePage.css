@@ -1,0 +1,15 @@
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtersContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.filtersContainer select {
+    width: 13%;
+    margin-left: 20px;
+}

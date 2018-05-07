@@ -1,0 +1,40 @@
+.restaurantView {
+    display: flex;
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+    padding: 20px 15px;
+}
+
+.restaurantInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.restaurantAddress {
+    font-size: 18px;
+}
+
+.restaurantTitle {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.restaurantTitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.restaurantImage {
+    width: 120px;
+    height: 120px;
+}
+
+.category {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 5px;
+    border: 2px solid rgba(176, 164, 164, 0.5);
+}
