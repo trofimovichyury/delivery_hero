@@ -77,7 +77,7 @@ export default class HomePage extends Component {
                             options={[...this.state.filters]}
                         />
                     </div>
-                    <div className={style.restaurantsList}>
+                    <div>
                         {this.renderRestaurants()}
                     </div>
                 </div>
